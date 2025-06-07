@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biblioteca Literária</title>
+    <style>
+        :root {
+            --primary: #4a6fa5;
+            --secondary: #166088;
+            --light: #f8f9fa;
+            --dark: #343a40;
+            --accent: #ff7e5f;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background-color: #f5f5f5;
+            color: var(--dark);
+            line-height: 1.6;
+        }
+        
+        header {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: white;
+            padding: 2rem 0;
+            text-align: center;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .subtitle {
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+        
+        .books-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 2rem;
+            padding: 3rem 0;
+        }
+        
+        .book-card {
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .book-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+        }
+        
+        .book-cover {
+            height: 200px;
+            background-color: var(--light);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--secondary);
+            font-size: 3rem;
+        }
+        
+        .book-info {
+            padding: 1.5rem;
+        }
+        
+        .book-title {
+            font-size: 1.3rem;
+            margin-bottom: 0.5rem;
+            color: var(--secondary);
+        }
+        
+        .book-author {
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            color: var(--primary);
+        }
+        
+        .book-meta {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 1rem;
+            padding-top: 1rem;
+            border-top: 1px solid #eee;
+            font-size: 0.9rem;
+        }
+        
+        .book-year {
+            background-color: var(--accent);
+            color: white;
+            padding: 0.25rem 0.75rem;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: bold;
+        }
+        
+        footer {
+            text-align: center;
+            padding: 2rem 0;
+            background-color: var(--dark);
+            color: white;
+            margin-top: 2rem;
+        }
+        
+        @media (max-width: 768px) {
+            .books-container {
+                grid-template-columns: 1fr;
+            }
+            
+            h1 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Biblioteca Literária</h1>
+            <p class="subtitle">Descubra grandes obras e seus autores</p>
+        </div>
+    </header>
+    
+    <main class="container">
+        <div class="books-container">
+            <!-- Livro 1 -->
+            <div class="book-card">
+                <div class="book-cover">📖</div>
+                <div class="book-info">
+                    <h2 class="book-title">Dom Casmurro</h2>
+                    <p class="book-author">Machado de Assis</p>
+                    <p>Um clássico da literatura brasileira que explora ciúme e ambiguidade.</p>
+                    <div class="book-meta">
+                        <span>Romance</span>
+                        <span class="book-year">1899</span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Livro 2 -->
+            <div class="book-card">
+                <div class="book-cover">📚</div>
+                <div class="book-info">
+                    <h2 class="book-title">1984</h2>
+                    <p class="book-author">George Orwell</p>
+                    <p>Uma distopia sobre vigilância governamental e controle da mente.</p>
+                    <div class="book-meta">
+                        <span>Ficção Distópica</span>
+                        <span class="book-year">1949</span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Livro 3 -->
+            <div class="book-card">
+                <div class="book-cover">🖋️</div>
+                <div class="book-info">
+                    <h2 class="book-title">O Pequeno Príncipe</h2>
+                    <p class="book-author">Antoine de Saint-Exupéry</p>
+                    <p>Uma fábula poética sobre amizade, amor e a essência humana.</p>
+                    <div class="book-meta">
+                        <span>Literatura Infantil</span>
+                        <span class="book-year">1943</span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Livro 4 -->
+            <div class="book-card">
+                <div class="book-cover">📓</div>
+                <div class="book-info">
+                    <h2 class="book-title">Cem Anos de Solidão</h2>
+                    <p class="book-author">Gabriel García Márquez</p>
+                    <p>A saga da família Buendía no imaginário povoado de Macondo.</p>
+                    <div class="book-meta">
+                        <span>Realismo Mágico</span>
+                        <span class="book-year">1967</span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Livro 5 -->
+            <div class="book-card">
+                <div class="book-cover">📘</div>
+                <div class="book-info">
+                    <h2 class="book-title">Orgulho e Preconceito</h2>
+                    <p class="book-author">Jane Austen</p>
+                    <p>Um romance sobre Elizabeth Bennet e o sr. Darcy na Inglaterra rural.</p>
+                    <div class="book-meta">
+                        <span>Romance Clássico</span>
+                        <span class="book-year">1813</span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Livro 6 -->
+            <div class="book-card">
+                <div class="book-cover">📕</div>
+                <div class="book-info">
+                    <h2 class="book-title">A Metamorfose</h2>
+                    <p class="book-author">Franz Kafka</p>
+                    <p>Gregor Samsa acorda transformado em um inseto monstruoso.</p>
+                    <div class="book-meta">
+                        <span>Ficção Absurdista</span>
+                        <span class="book-year">1915</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    
+    <footer>
+        <div class="container">
+            <p>&copy; 2023 Biblioteca Literária. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+</body>
+</html>
